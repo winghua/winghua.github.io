@@ -5,9 +5,6 @@ window.onload=function(){
 
 		if(checkScrollAction)
 		{
-			console.log("Hello");
-		console.log('clientHeight'+document.documentElement.clientHeight);
-		console.log('scrollTop'+document.documentElement.scrollTop);
 			var oMainBox = document.getElementById('main');
 			for(var i = 0; i < json.data.length;i++)
 			{
