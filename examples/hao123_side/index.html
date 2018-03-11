@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hao123</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<!-- <header>
+		<section class="header-nav">
+			<a href="#"> <img class="logo" src="img/hao123.png" alt=""> </a>
+			<ul class="header-list">
+				<li class="header-list-item header-weather">
+					<span class="header-weather-common header-weather-location">深圳</span>
+					<a class="header-weather-common header-weather-switch" href="#">切换</a>
+					<a class="header-weather-common header-weather-all"  href="#">七日天气</a>
+				</li>
+				<li class="header-list-item header-climate">
+					<a href="#">
+						<i class="header-climate-icon"></i>
+						<div id="header-climate-status" class="header-climate-status">
+							<div id="move">
+							<span class="status-text1 status-common">阴</span>
+							<span class="status-text2 status-common">良</span>
+							<span class="status-text3 status-common">阴</span>
+							</div>
+						</div>
+						<span class="header-climate-temperature">24~19℃</span>
+					</a>
+				</li>
+				<li class="header-list-item header-climate">
+					<a href="#">
+						<i class="header-climate-icon"></i>
+						<div id="header-climate-status" class="header-climate-status">
+							<div id="move2">
+							<span class="status-text1 status-common">阴</span>
+							<span class="status-text2 status-common">良</span>
+							<span class="status-text3 status-common">阴</span>
+							</div>
+						</div>
+						<span class="header-climate-temperature">24~19℃</span>
+					</a>
+				</li>
+				<li class="header-list-item header-calender">
+					<a href="#">
+						<span>11月07日</span>
+						<span class="header-calender-week">星期二</span>
+						<div id="header-calender-show">
+							<div id="header-calender-container">
+								<ul>
+									<li>
+										<b class="header-calender-icon1 header-calender-common"></b><i class="header-calender-text">嫁娶</i><i class="header-calender-text">纳彩</i><i class="header-calender-text">订盟</i>
+									</li>
+									<li>
+										<b class="header-calender-icon2 header-calender-common"></b><i class="header-calender-text">破图</i><i class="header-calender-text">动土</i><i class="header-calender-text">安门</i>
+									</li>
+									<li>
+										<b class="header-calender-icon3 header-calender-common"></b><i class="header-calender-text">嫁娶</i><i class="header-calender-text">纳彩</i><i class="header-calender-text">订盟</i>
+									</li>
+								</ul>
+								
+							</div>
+							
+						</div>
+					</a>
+				</li>
+				<li class="header-list-item">
+					<a href="#" class="header-recom">
+						<b>推荐:</b> 
+						<i>谁能看出点什么</i>
+					</a>					
+					<form action="">
+						<div class="header-mail">
+							<label for="">邮箱：</label>
+							<input type="text" class="header-mail-account">
+							<div class="header-input-hide">
+								<select name="" id="">
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+								<input type="text" />
+								<input type="submit" name="submit" id="submit" value=""登录/>
+								<input type="checkbox" name="agreement"/>
+								<label for="agreement">阅读并同意使用协议</label>
+							</div>
+						</div>
+					</form>
+				</li>
+				<li class="header-list-item header-login">
+						<ul class="header-login-list">
+							<li class="header-login-user">
+								<b class="login-user-icon"></b>
+								<a href="" class="login-user-name">陋室albert</a>
+								<div style="display:none">
+									<b></b>
+									<a href="">VIP俱乐部</a>
+									<a href="">退出</a>
+								</div>
+							</li>
+							<li class="header-login-source">
+								<b class="login-source-icon"></b>
+								<a href="">网盘</a>
+							</li>
+							<li>
+								<b></b>
+								<a href="">手机扫码有礼</a>
+								<div style="display:none">
+									<a href="">
+										<img src="" alt="">
+										<span>扫二维码下载手机版</span>
+										<span>做任务能<i>赚金币</i></span>
+									</a>
+								</div>
+							</li>
+						</ul>
+				</li>
+			</ul>
+		</section>
+		<section class="search">
+			<a href="#"> <img class="baidu-logo" src="img/baidulogo.png" alt=""> </a>
+			<form class="search-form" action="#">
+				<div class="select-box" id="select-box">
+					<a  class="select-search-type" href="#"><span id="select-txt">网页</span><i class="arrow-sm"></i></a>
+					<div class="tab" id="tab">
+						<ul>
+							<li><a href="#">网页</a></li>
+							<li><a href="#">音乐</a></li>
+							<li><a href="#">视频</a></li>
+							<li><a href="#">图片</a></li>
+							<li><a href="#">贴吧</a></li>
+							<li><a href="#">知道</a></li>
+							<li><a href="#">新闻</a></li>
+							<li><a href="#">地图</a></li>
+							<li><a href="#">更多>></a></li>
+						</ul>						
+					</div>
+				</div>
+				
+
+				<input type="text" id="search-input-txt" class="search-input-txt" name="search-input-txt" placeholder="搜你想搜的"/>
+				<input type="submit" class="submit" name="submit" value="百度一下"/>
+				<div class="show-list" id="show-list">
+					<ol>
+						<li><span class="icon-num icon-num-first">1</span>刘涛公开真实体重<img src="img/new-icon.png" alt=""></li>
+						<li><span class="icon-num icon-num-first">2</span>女婴罕见皮肤缺失<img src="img/new-icon.png" alt=""></li>
+						<li><span class="icon-num icon-num-first">3</span>围观牌局险送命<img src="img/new-icon.png" alt=""></li>
+						<li><span class="icon-num icon-num-other">4</span>地铁施工挖出古桥<img src="img/new-icon.png" alt=""></li>
+						<li><span class="icon-num icon-num-other">5</span>德游客印度遭暴打</li>
+						<li><span class="icon-num icon-num-other">6</span>武僧一龙被KO</li>
+						<li><span class="icon-num icon-num-other">7</span>吴尊首曝光老婆私照</li>
+						<li><span class="icon-num icon-num-other">8</span>沙特首富王子被抓</li>
+						<li><span class="icon-num icon-num-other">9</span>陈翔自爆左耳失聪</li>
+						<li><span class="icon-num icon-num-other">10</span>宋丹丹致歉辛芷蕾</li>												
+					</ol>
+				</div>
+			</form>
+		</section>
+	</header> -->
+	<div class="side">
+	<div id="side-nav" class="side-nav">
+		<ul class="side-nav-main">
+			<li class="side-nav-main-item"> 
+				<div class="content">
+					<a href="" class="float-right"><img src="img/meng-1.jpg" alt=""></a>
+					<a href="" class="link">食戟之灵 餐之血</a>
+					<a href="" class="desc">用美食征服世界</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/meng.png" alt="">萌主页</a>			
+			</li>
+
+			<li class="side-nav-main-item"> 
+				<div class="content">
+					<a href="" class="float-right"><img src="img/dong-1.jpg" alt=""></a>
+					<a href="" class="link">喜洋洋与灰太狼</a>
+					<a href="" class="desc">嫁人就嫁灰太狼</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/dongman.png" alt="">动漫</a> 
+			</li>
+
+			<li class="side-nav-main-item">  
+				<div class="content">
+					<a href="" class="float-right"><img src="img/you-1.jpg" alt=""></a>
+					<a href="" class="link">英雄联盟职业联赛</a>
+					<a href="" class="desc">S7全球总决赛</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/yingshi.png" alt="">游戏直播</a> 
+			</li>
+			<li class="side-nav-main-item"> 
+				<div class="content">
+					<a href="" class="float-right"><img src="img/xin-1.jpg" alt=""></a>
+					<a href="" class="link">重磅好消息</a>
+					<a href="" class="desc">11月11号北京人放假</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/xinwen.png" alt="">新闻</a> 
+			</li>
+			<li class="side-nav-main-item">  
+				<div class="content">
+					<a href="" class="float-right"><img src="img/gao-1.jpg" alt=""></a>
+					<a href="" class="link">听了才知道谁是大佬</a>
+					<a href="" class="desc">普通人只能望尘莫及</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/gaoxiao.png" alt="">搞笑</a> 
+			</li>
+			<li class="side-nav-main-item"> 
+				<div class="content">
+					<a href="" class="float-right"><img src="img/ju-1.png" alt=""></a>
+					<a href="" class="link">有害信息举报中心</a>
+					<a href="" class="desc">中国互联网举报中心</a>
+				</div>
+				<a href="" class="icon">
+					<img class="icon-img" src="img/jubao.png" alt="">举报中心</a> 
+			</li>
+		</ul>	
+	</div>
+	<div>
+		<a href="#" id="arrow" class="arrow-common arrow-show"></a>	
+	</div>
+
+</body>
+</html>

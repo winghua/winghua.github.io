@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="" target="_blank">
+	<title>toolbar</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar{
+		position: fixed;
+		right:100px;
+		top:100px;
+		list-style-type:none;
+	}
+	.toolbar-item{
+		display: block;
+		width:50px;
+		height:50px;
+		transition:background-position 0.8s;
+	}
+	.item_1{
+		background: url(img/toolbar.png) 0 -426px no-repeat;
+	}
+	.item_1:hover{
+		background: url(img/toolbar.png) 0 -490px no-repeat;
+	}
+	.item_2{
+		background: url(img/toolbar.png) 0 -550px no-repeat;
+
+	}
+	.item_2:hover{
+		background: url(img/toolbar.png) 0 -614px no-repeat;
+
+	}
+	.item_3{
+		background: url(img/toolbar.png) 0 -674px no-repeat;
+
+	}
+	.item_3:hover{
+		background: url(img/toolbar.png) 0 -738px no-repeat;
+
+	}
+	.item_4{
+		background: url(img/toolbar.png) 0 -800px no-repeat;
+
+	}
+	.item_4:hover{
+		background: url(img/toolbar.png) 0 -860px no-repeat;
+
+	}
+	</style>
+</head>
+<body>
+	<ul class="toolbar">
+		<li ><a class="toolbar-item item_1" href="http://www.baidu.com" ></a></li>
+		<li class="toolbar-item item_2"></li>
+		<li class="toolbar-item item_3"></li>
+		<li class="toolbar-item item_4"></li>
+	</ul>
+	
+</body>
+</html>

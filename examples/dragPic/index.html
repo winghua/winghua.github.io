@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
+	<title>dragPic</title>
+	<script src="js/prefixfree.min.js"></script>
+	<style>
+		*{margin:0;padding:0;}
+		body,html{height: 100%;}
+		ul,li{list-style: none;}
+		.container{
+			width:582px;
+			height: 582px;
+			border: 1px solid #aaa;
+			position: absolute;
+			top: 0;left: 0;right: 0;bottom: 0;
+			margin: auto;
+			padding: 0 40px;
+		}
+		.container ul li{
+			float: left;
+			font-size: 0px;
+			width: 154px;
+			height: 154px;
+			margin:20px;
+		}
+		.container ul img{
+			width: 150px;
+			height: 150px;
+		}
+		.container .item img{
+			border-radius: 5px;
+			border: 2px solid #ccc;
+			box-shadow: 1px 1px 10px #888;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="item_list">
+			<li>
+				<div class="item">
+					<img src="img/0.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/1.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/2.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/3.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/4.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/5.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/6.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/7.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<img src="img/8.jpg" alt="">
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+
+<script>
+	$(function(){
+		var containerL = $(".container").offset().left;
+		var containerT = $(".container").offset().top;
+		var targetArr = $(".container .item");
+		var animating = false;
+		//窗口大小变化时，更新container的坐标
+		$(window).resize(function(){
+			containerL = $(".container").offset().left;
+			containerT = $(".container").offset().top;
+		})
+
+		function Pointer(obj){
+			this.x = obj.x;
+			this.y = obj.y;
+		}
+		function Position(obj){
+			this.left = obj.left;
+			this.top = obj.top;
+		}
+		targetArr.each(function(index){
+			var $thisM =$(this);
+			var thisM = this;
+			
+			//图片初始化，获得初始位置坐标
+			thisM.init = function(){
+				var left = $thisM.parent().offset().left;
+				var top = $thisM.parent().offset().top;
+
+				thisM.firstPosi = new Position({
+					"left":left-containerL,
+					"top":top-containerT
+				});
+				// $thisM.attr("data-index",index);
+				thisM.index = index;
+
+				$thisM.css({
+					"position":"absolute",
+					"left":thisM.firstPosi.left,
+					"top":thisM.firstPosi.top
+				});
+				//add drag function
+				thisM.drag();
+
+			};
+			//移动
+			thisM.move = function(callback){
+				$thisM.stop(true).animate({
+					"left":thisM.firstPosi.left,
+					"top":thisM.firstPosi.top,
+					"z-index":"1"
+				},500,callback)
+			}
+			thisM.checkOverlap = function(){
+				var moveItem = this;
+				var moveIndex = moveItem.index;
+				targetArr.each(function(index,val){
+					var $val = $(val);
+					if(val.index !== moveIndex){
+						//与左上角和右下角的坐标比较
+						if(moveItem.curPoint.x > $val.offset().left && moveItem.curPoint.y > $val.offset().top && moveItem.curPoint.x < ($val.offset().left + $val.width()) && moveItem.curPoint.y < ($val.offset().top + $val.height() )){
+							val.rearrange(moveItem);
+							
+						}
+					}
+				});
+			};
+			//图片重排
+			thisM.rearrange = function(moveItem){
+				var startI = 0;
+				var endI = 0;
+				var tempIndex = null;
+				var tempFirstPosi=null;
+				var tempObj = null;
+				animating = true;
+				//右边，下边拉动的情况
+				if(this.index > moveItem.index){
+					startI = moveItem.index;
+					endI = this.index;
+					for(var i = startI;i< endI;i++){
+							 tempObj = targetArr[i];
+							 targetArr[i] =targetArr[i+1];
+							 targetArr[i+1] = tempObj;
+							 tempIndex = targetArr[i].index;
+							 tempFirstPosi = $.extend(true,{},targetArr[i].firstPosi);
+
+							 targetArr[i].index = targetArr[i+1].index;
+							 targetArr[i].firstPosi = targetArr[i+1].firstPosi;
+							 targetArr[i+1].index = tempIndex;
+							 targetArr[i+1].firstPosi = tempFirstPosi;
+							
+							if(i + 1 === endI){
+								targetArr[i].move(function(){
+									animating = false;
+								});
+							}else{
+								targetArr[i].move();
+							}
+
+						}	
+					
+				}else{//往左边，上方拉动的情况
+					endI = moveItem.index;
+					startI = this.index;
+					for(var i = endI;i > startI;i--){
+							 tempObj = targetArr[i];
+							 targetArr[i] =targetArr[i-1];
+							 targetArr[i-1] = tempObj;
+							 tempIndex = targetArr[i].index;
+							 tempFirstPosi = $.extend(true,{},targetArr[i].firstPosi);
+
+							 targetArr[i].index = targetArr[i-1].index;
+							 targetArr[i].firstPosi = targetArr[i-1].firstPosi;
+							 targetArr[i-1].index = tempIndex;
+							 targetArr[i-1].firstPosi = tempFirstPosi;
+							targetArr[i].move();
+
+							if(i - 1 === startI){
+								targetArr[i].move(function(){
+									animating = false;
+								});
+							}else{
+								targetArr[i].move();
+							}
+
+						}	
+				}
+			}
+			//拖动特效
+			thisM.drag = function(){
+				var isDrag = false;
+				var oldPoint = new Pointer({"x":0,"y":0});
+				var oldPosi = new Position({"left":0,"top":0});
+				var dragItem ={};
+
+				$thisM.mousedown(function(e){
+					e.preventDefault();
+					dragItem = thisM
+
+					oldPoint.x = e.clientX;
+					oldPoint.y = e.clientY;
+					oldPosi.left = $thisM.position().left;
+					oldPosi.top = $thisM.position().top;
+					isDrag = true;
+					
+					$(dragItem).css({"z-index":"3"})
+				});
+				$(document).mousemove(function(e){
+					if(!isDrag) return false;
+
+					var offsetX = e.clientX - oldPoint.x;
+					var offsetY = e.clientY - oldPoint.y;
+					oldPoint.x = e.clientX;
+					oldPoint.y = e.clientY;
+
+					$(dragItem).css({
+						"left":oldPosi.left + offsetX,
+						"top" : oldPosi.top + offsetY,
+					})
+
+					oldPosi.left += offsetX;
+					oldPosi.top += offsetY;
+
+					dragItem.curPoint = new Pointer({
+						"x":oldPoint.x,
+						"y":oldPoint.y
+					});
+
+					//如果其他图片正在移动，不执行以下操作，
+					//避免鼠标抖动引起数据一直交换，图片移动出现问题
+					if(!animating){
+						//检测是否与其他图片重合
+						dragItem.checkOverlap();
+					}
+					
+
+
+				});
+				$(document).mouseup(function(){
+					if(!isDrag) return false;
+					isDrag = false;
+					dragItem.move();
+				})
+
+
+			};
+
+
+
+
+			//start now
+			thisM.init();
+
+		})
+	})
+</script>
+</html>

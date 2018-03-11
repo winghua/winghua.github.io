@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="jquery.1.10.2.js"></script>
+<title>改变字体</title>
+<style>
+	.msg{
+		width:400px;
+		margin: 10px auto;
+	}
+	span{
+		display: inline-block;
+		border: 1px solid #000;
+		background-color: #ccc;
+		cursor:pointer;
+		width:50px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<div class="msg">
+	<span class="bigger">放大</span>
+	<span class="smaller">缩小</span>
+	<p id="para">
+		this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.vthis is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.
+	</p>
+</div>
+</body>
+<script>
+	$(function(){
+		$("span").click(function(){
+			var thisEle = $("#para").css("font-size");
+			var textFontSize = parseFloat(thisEle,10);
+			console.log(textFontSize);
+			var unit = thisEle.slice(-2);
+			var cName = $(this).attr("class");
+			if(cName === "bigger"){
+				textFontSize += 2;
+			}else if(cName === "smaller"){
+				textFontSize -= 2;
+			}
+
+			$("#para").css("font-size",textFontSize+unit);
+		})
+	})
+</script>
+</html>

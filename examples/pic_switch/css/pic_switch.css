@@ -1,0 +1,56 @@
+/*reset*/
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+a:hover{text-decoration: none}
+ul,li{list-style: none}
+
+/*banner*/
+.banner{
+	width: 1200px;
+	height: 600px;
+	border: 5px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: 50px auto;
+	position: relative;
+	background: url(../img/bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+.imgList li{
+	width: 600px;
+	height: 300px;
+	box-shadow: 0 0 10px 1px rgba(50,0,150,1);
+	position: absolute;
+}
+.imgList img{
+	width: 100%;
+	height: 100%;
+}
+.btn a.arrow{
+	position: absolute;
+	display: inline-block;
+	width: 100px;
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+	font-size: 80px;
+	font-weight: 700;
+	background: transparent;
+	top:150px;
+	z-index: 4;
+	color: rgba(255,255,255,0.3);
+	opacity: 0;
+}
+.btn .prev{
+	left: 50px;
+}
+.btn .next{
+	right: 50px;
+}
+.btn a.arrow:hover{
+	opacity: 1;
+	color: #00a0ee;
+}

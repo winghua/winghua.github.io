@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		span{
+			border: 1px solid orange;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" name="sex1" value="man" id="sex1">
+	<label for="sex">男</label>
+	<input type="checkbox" name="sex2" value="female" id="sex2">
+	<label for="sex2">女</label>
+	<span>touch</span>
+</body>
+<script src="js/jquery.1.10.2.js"> </script>
+<script>
+	$(function(){
+		$("span").click(function(){
+			console.log($(":checked").length);
+		})
+	})
+</script>
+</html>

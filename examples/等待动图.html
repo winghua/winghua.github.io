@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>等待动图</title>
+	<style type="text/css">
+		div{
+			width:55px;
+			height:50px;
+			position: absolute;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		span{
+			height:50px;
+			width:5px;
+			margin: 0px 3px;
+			background: green;
+			display: block;
+			float:left;
+			transform:scaleY(0.4);
+			animation:active 1s infinite linear;
+		}
+		span:nth-child(1){
+			animation-delay:0.1s;
+		}
+		span:nth-child(2){
+			animation-delay:.2s;
+		}
+		span:nth-child(3){
+			animation-delay:.3s;
+		}
+		span:nth-child(4){
+			animation-delay:.4s;
+		}
+		span:nth-child(5){
+			animation-delay:.5s;
+		}
+		@keyframes active{
+			0%{
+				transform:scaleY(0.4);
+			}
+			40%{
+				transform:scaleY(0.4);
+			}
+			100%{
+				transform:scaleY(0.4);
+			}
+			20%{
+				transform:scaleY(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+</body>
+</html>

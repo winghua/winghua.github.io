@@ -1,0 +1,281 @@
+html,body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/*min-height: 950px;*/
+	padding-bottom: 150px;
+}
+a:hover{
+	color: #ff873e;
+	text-decoration: underline;
+}
+input[type="checkbox"]{
+	display: none;
+}
+.shopCart_list{
+	overflow: hidden;
+}
+.shopCart_list li{
+	float: left;
+}
+.scItem_check{
+	width: 50px;
+}
+label{
+	position: relative;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #b8b8b8;
+	cursor: pointer;
+	border-radius: 1px;
+	margin-right: 5px;
+	top: 3px;
+}
+label.on{
+	background: url(../img/mark.png) center no-repeat;
+}
+.scItem_info{
+	width: 342px;
+}
+.scItem_para{
+	width: 220px;
+}
+.scItem_price{
+	width: 130px;
+}
+.scItem_amount{
+	width: 120px;
+}
+.scItem_sum{
+	width: 140px;
+}
+.scItem_opt{
+	width: 164px;
+}
+.shopCart{
+	position: relative;
+	width: 1200px;
+	min-width: 1200px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.shopName{
+	line-height: 38px;
+}
+
+/*header*/
+.shopCart_h{
+	height: 50px;
+	line-height: 50px;
+}
+.shopCart_h .scItem_info{
+	text-indent: 40px;
+}
+.shopCart_h .scItem_para{
+	text-indent: 20px;
+}
+.shopCart_h .scItem_price{
+	text-indent: 20px;
+}
+.shopCart_h .scItem_amount{
+	text-indent: 20px;
+}
+.shopCart_h .scItem_sum{
+	text-indent: 20px;
+}
+.shopCart_h .scItem_opt{
+	text-indent: 20px;
+}
+/*body*/
+.shopGoods{
+	border: 1px solid #ccc;
+}
+.shopGoods .scItem_info img{
+	width: 90px;
+	height: 90px;
+	vertical-align: top;
+}
+.shopGoods .scItem_info a{
+	display: inline-block;
+	width: 200px;
+	line-height: 18px;
+	margin-left: 5px;
+}
+.shopGoods ul{
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+	padding-right: 0px;
+}
+.shopGoods ul:last-child{
+	border-bottom: none;
+}
+.shopGoods .scItem_para{
+	color:#9c9c9c;
+	line-height: 18px;
+}
+.shopGoods .scItem_amount input{
+	width: 40px;
+	height: 15px;
+	border: 1px solid #aaa;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+
+}
+.shopGoods .scItem_amount a{
+	display: inline-block;
+	height: 23px;
+	width: 17px;
+	background: #f0f0f0;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 23px;
+	border: 1px solid #e5e5e5;
+	position: relative;
+}
+.shopGoods .scItem_amount a.reduce{
+	margin-right: -1px;
+}
+.shopGoods .scItem_amount a.add{
+	margin-left: -1px;
+}
+/*.shopGoods .scItem_amount a:hover{
+	text-decoration: none;
+	border: 1px solid #ff873e;
+	z-index: 2;
+}*/
+.shopGoods .scItem_amount a.optDis{
+	color: #bbb;
+}
+
+.shopGoods .scItem_price{
+	color: black;
+	font-family: Verdana,Tahoma,arial;
+	font-weight: bold;
+}
+.shopGoods .scItem_sum{
+	color: red;
+	font-family: Verdana,Tahoma,arial;
+	font-weight: bold;
+}
+/*footer*/
+.shopCart_f{
+	position: fixed;
+	bottom: 0;
+	background: #e5e5e5;
+	height: 50px;
+	width: 1200px;
+	line-height: 50px;
+	z-index: 3;
+}
+.f_content{
+	float: right;
+}
+.selectGood{
+	display: inline-block;
+	margin-right: 20px;
+}
+.selectGood strong{
+	color: #f40;
+	padding: 0 10px;
+	font-size: 18px;
+	font-family: tohoma,arial;
+}
+.TotalPrice{
+	display: inline-block;
+}
+.TotalPrice strong{
+ 	font-size: 20px;
+	color: #f40;
+	font-family: Arial;
+	font-weight: 400;
+	margin-right: 10px;
+	margin-left:15px; 
+ }
+.calculate{
+	display: inline-block;
+	width: 120px;
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+	background: #f40;
+	letter-spacing: 5px;
+	cursor: pointer;
+
+}
+.calDisa{
+	background: #B0B0B0;
+	cursor: not-allowed;
+}
+/*pop*/
+.pop_mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	display: none;
+}
+.pop_dialog{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 360px;
+	height: 120px;
+	padding: 20px;
+	background: white;
+	border: 1px solid #aeaeae;
+	border-radius: 3px;
+}
+.pop_dialog h4{
+	font-size: 14px;
+}
+.pop_dialog p{
+	line-height: 60px;
+}
+.dialog_btn a{
+	display: inline-block;
+	width: 58px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 1px;
+	font-weight: 700;
+}
+.dialog_btn a.btn_sure{
+	color: white;
+	border: 1px solid #52a0e5;
+	background: #52a0e5;
+	margin-right: 20px;
+}
+.dialog_btn a.btn_close{
+	color: #000;
+ 	background: #fff;
+ 	border: 1px solid #d9d9d9;
+
+}
+.dialog_btn a:hover{
+	text-decoration: none;
+}
+.pop_mask .icon_close{
+	position: absolute;
+	display: inline-block;
+	width:10px;
+	height: 16px;
+	font-size: 14px;
+	right: 0;
+	top: 0;
+	padding: 20px;
+	font-weight: 700;
+	cursor: pointer;
+}

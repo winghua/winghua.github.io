@@ -1,0 +1,456 @@
+*{
+		margin:0;
+		padding: 0;
+	}
+	b,i{
+		font-style: normal;
+		font-weight: normal;
+	}
+	a{
+		text-decoration: none;
+		color: #999;
+		
+	}
+	ul{
+		text-decoration: none;
+		list-style-type: none;
+	}
+	body{
+		background-color: rgba(245,245,245,1);
+	}
+
+	.side{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width:50px;
+		height:100%;
+	}
+	.side-nav{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:50px;
+		height:100%;
+		background-color: #e6e6e6;
+		/*transition:left 0.8s;*/
+	}
+	.arrow-common{
+		background-color: #e6e6e6;
+		position: absolute;
+		bottom: 50px;
+		width:50px;
+		height:50px;
+		background-image:url(../img/allicon.png);
+		background-repeat: no-repeat;
+		
+	}
+	.arrow-show{
+		background-position: -458px -37px;
+	}
+	.arrow-hide{
+		background-position: -506px -37px;	
+	}
+	.side-nav-main{
+		font-size: 12px;
+		color: #999;
+		padding-top: 63px;
+	}
+	.icon-img{
+		display: block;
+		margin:8px auto;
+		width:32px;
+		height: 32px;
+	}
+	.icon{
+		position: relative;
+		display: block;
+		height:68px;
+		text-align: center;
+		border: 1px solid #e6e6e6;
+		background: transparent;
+		border-left: 0;
+		border-right: 0;
+	}
+	
+	.content{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 50px;
+		width:210px;
+		height:68px;
+		background-color: #f7f7f7;
+		border: 1px solid #e6e6e6;
+		overflow: hidden;;
+	}
+	.side-nav-main-item{
+		display: block;
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.side-nav-main-item:hover .content{
+		display:block;
+	}
+	.link{
+		display: block;
+		padding-top: 3px;
+		padding-left: 10px;
+		width:127px;
+		height:34px;
+		font-size: 14px;
+		line-height: 46px;
+		color: #666;
+		white-space: nowrap;
+		text-overflow:ellipsis;
+
+	}
+	.float-right{
+		float: right;
+	}
+	.desc{
+		color: #999;
+		line-height: 18px;
+		display: block;
+		overflow: hidden;
+		padding-left: 10px;
+		width: 127px;
+		height: 34px;
+	}
+	.logo{
+		width:150px;
+		height:45px;
+		float: left;
+	}
+	header{
+		position: relative;
+		margin-left: 50px;
+		background-color: white;
+		border-bottom: 1px solid #ccc;
+		height:170px;
+	}
+	.baidu-logo{
+		width:128px;
+		height:40px;
+		display: block;
+		float: left;
+	}
+	.search{
+		position: relative;
+		margin-left: 130px;
+		width:800px;
+	}
+	.search > a{
+		display: block;
+		/*width:150px;*/
+		clear: both;
+	}
+	.search-form{
+		width: 660px;
+		height:47px;
+		border:1px solid #3083ff;
+		float: left;
+		margin-left: 5px;
+		margin-top: -6px;
+		line-height: 47px;
+		position: relative;
+	}
+	.select-search-type{
+		display:block;
+		float: left;
+		width: 40px;
+		height: 47px;
+		font-size: 12px;
+		color:#999;
+		line-height: 47px;
+		padding-left: 10px;
+	}
+	.arrow-sm{
+		display: block;
+		width:9px;
+		height:6px;
+		background: url(../img/allicon.png) -338px -465px no-repeat;float: right;
+		margin-top: 20px;
+		margin-right: 4px;
+	}
+	.search-input-txt{
+		font-size: 16px;
+		font-family: arial;
+		color: black;
+		width:477px;
+		height: 17px;
+		line-height: 17px;
+		padding: 15px 5px;
+		border: 0;
+	}
+	.search-input-txt:focus{
+		border: 0;
+		outline: none;
+	}
+	.submit{
+		display: block;
+		float: right;
+		width:115px;
+		height:47px;
+		line-height: 47px;
+		border: 0;
+		background-color: #3083ff;
+		color: white;
+		font-size: 16px;
+		font-family: arial;
+	}
+	.show-list > ol{
+		position: absolute;
+		top: 47px;
+		left: -1px;
+		width: 545px;
+		border:1px solid #999;
+		list-style-type: none;
+		font-size: 14px;
+		line-height: 28px;		
+	}
+	.show-list{
+		display: none;
+	}
+	.show-list ol li:hover{
+		background-color: #eee;
+	}
+	.icon-num{
+		display: inline-block;
+		width:18px;
+		height:16px;
+		border-radius: 2px;		
+		font-size: 12px;
+		font-family: arial;		
+		font-weight: 800;
+		line-height: 18px;
+		text-align: center;
+		margin-right: 8px;
+		margin-left: 8px;
+	}
+	.icon-num-first{
+		background-color: #1DA671;
+		color: white;
+	}
+	.icon-num-other{
+		background-color: white;
+		color: #888;
+	}
+	.show-list img{
+		width: 12px;
+		height: 9px;
+		margin-left: 3px;
+	}
+	.select-box{
+
+	}
+	.tab{
+		display: none
+	}
+	.tab ul{
+		width:50px;
+		border: 1px solid #666;
+		position: absolute;
+		border-top: 0;
+		top: 47px;
+		left: -1px;
+		
+	}
+
+	.tab ul li{
+		border-top: 1px solid white;
+		color: #999;
+		font:400 12px/24px simsun;
+	}
+	.tab ul li:hover{
+		background-color: #eee;
+	}
+	.tab ul li a{
+		margin-left: 10px;
+	}
+	.header-nav{
+		height:75px;
+		width:1280px;
+		padding-top: 15px;
+		font-size: 12px;
+	}
+	.header-list-item{
+		float: left;
+		margin-left: 30px;
+
+	}
+	.header-list-item:hover{
+		background-color:rgba(245,245,245,1);
+	}
+	.header-input-hide{
+		display: none;
+	}
+
+	.header-list{
+		float: left;
+	}
+	.header-weather{
+		width:72px;
+		padding: 10px;
+	}
+	.header-weather-common{
+		display: inline-block;
+		float: left;
+
+	}
+	.header-weather-switch{
+		margin-left: 4px;
+	}
+	.header-weather-all{
+		margin-top: 2px;
+	}
+	.header-climate{
+		width:112px;
+		height:30px;
+		background:url(../img/yun1.png) no-repeat;
+		position: relative;
+		padding: 10px 0;
+		background-origin: content-box;
+
+	}
+	.header-climate-icon{
+		width: 19px;
+		height: 19px;
+		background:url(../img/allicon2.png) -547px -264px no-repeat;
+		position: absolute;
+		top: 25px;
+		left:20px;
+	}
+	.header-climate-status{
+		position: absolute;
+		top:10px;
+		left:48px;
+		width:30px;
+		height:15px;
+		color: black;
+		overflow: hidden;
+	}
+	.header-climate-temperature{
+		display: block;
+		position: absolute;
+		right: 20px;
+		bottom: 5px;
+		color: black;
+	}
+	.status-common{
+		display: block;
+		margin-bottom: 3px;
+		width:16px;
+		height: 16px;
+		text-align: center;
+		line-height: 16px;
+	}
+	.status-text1{
+		
+	}
+	.status-text2{
+		
+		background-color: #f50;
+		color: white;
+		font-weight: bold;
+		
+	}
+	.status-text3{
+
+	}
+	#move{
+		position: absolute;
+		top:0px;
+		left: 0px;
+
+	}
+	.header-calender-common{
+		/*display: inline-block;*/
+		display: block;
+		float: left;
+		width: 16px;
+		height: 16px;
+		background-image: url(../img/allicon2.png);
+		background-repeat: no-repeat;
+	}
+	.header-calender-icon1{		
+		background-position:-541px -416px;
+	}
+	.header-calender-icon2{		
+		background-position:-307px -184px;
+	}
+	.header-calender-icon3{		
+		background-position:-541px -416px;
+	}
+	.header-calender-text{
+	/*	display: inline-block;*/
+		margin-left: 6px;
+		line-height: 16px;
+		font-size: 12px;
+	}
+	.header-list .header-calender a{
+		color: black;
+	}
+	.header-calender{
+		width:121px;
+		margin-top: 10px;
+		
+	}
+	#header-calender-show{
+		width:106px;
+		height: 16px;
+		overflow: hidden;
+		position: relative;
+	}
+	#header-calender-container{
+		position: absolute;
+		left: 0;
+		top: 0;
+
+	}
+	.header-calender-week{
+		padding-left: 13px;
+	}
+	.header-recom{
+		display: inline-block;
+		margin-top: 10px;
+		color: black;
+	}
+	.header-recom i{
+		margin-left: 5px;
+	}
+	.header-mail{
+		margin-top: 2px;
+	}
+	.header-mail-account{
+		width:122px;
+		height:13px;
+	}
+	.header-login-list{
+		width:151px;
+		height:49px;
+		margin-top: 10px;
+	}
+	.header-login-list a{
+		color: black;
+		
+	}
+	.header-login-list a:hover{
+		text-decoration: underline;
+	}
+	.header-login-user{
+		display: inline-block;
+	}
+	.login-user-icon{
+		display: inline-block;
+		width:15px;
+		height:14px;
+		background-image: url(../img/allicon2.png);
+		background-repeat: no-repeat;
+		background-position:-378px -465px;
+		margin-right: 3px;
+	}
+	.header-login-source{
+		display: inline-block;
+	}

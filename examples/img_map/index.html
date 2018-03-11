@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>usemap!</title>
+	<style type="text/css">
+		.box{
+			text-align: center;
+		}
+		p{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img src="images/eg_planets.jpg" alt="planet" usemap="#planet">
+		</div>
+
+		<map id="planet" name="planet">
+			<area shape="circle" coords="178,141,15" href="images/eg_venus.gif" target="_blank" alt="venus"/>
+			<area shape="circle" coords="128,161,10" href="images/eg_merglobe.gif" target="_blank" alt="merglobe" />
+			<area shape="rect" coords="0,0,110,260" href="images/eg_sun.gif" target="_blank" alt="sun"/>		
+		</map>
+		<p>点击太阳，金星和火星出现各自的大图</p>
+	</div>
+
+</body>
+</html>

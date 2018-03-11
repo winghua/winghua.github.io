@@ -1,0 +1,123 @@
+@import url("base.css");
+@import url("header.css");
+@import url("nav.css");
+#content{
+	width:800px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+/*left*/
+.content_left{
+	background: #eee;
+	border: 1px solid #aaa;
+	width: 200px;
+	float: left;
+	margin-right: 10px;
+}
+.global_module{
+	position: relative;
+	background: #eee;
+	padding-bottom: 8px;
+}
+.module_up_down{
+	height: 8px;
+	line-height: 8px;
+	position: absolute;
+	top:9px;
+	right: 10px;
+	cursor: pointer;
+}
+.global_module h3{
+	color: #fff;
+	background: #3B5998;
+	/*height: 30px;*/
+	height:26px; 
+	line-height:26px; 
+	/*line-height: 30px;*/
+	padding-left: 5px;
+	/*font-size: 1.1em;*/
+}
+/*.global_module ul{
+	padding-left: 12px;
+}*/
+.content_left .news ul { 
+	padding:5px 0 5px 15px; 
+}
+.content_left .procatalog ul { 
+	padding:5px 0 5px 15px; 
+}
+
+
+.procatalog .m-treeview li.m-expanded{
+	padding-left:16px;
+	background: url("../images/treeview-expanded.gif") 0 0 no-repeat;
+}
+.procatalog .m-treeview li.m-expanded ul li{
+	list-style-image: url('../images/treeview-item.gif');
+}
+/*right*/
+.content_right{
+	background: #eee;
+	border: 1px solid #aaa;
+	width: 586px;
+	float: left;
+}
+.content_right .ad{
+	margin-bottom: 10px;
+	width: 586px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+}
+.content_right .slider,.content_right .num{
+	position: absolute;
+}
+.content_right .num{
+	right: 5px;
+	bottom: 5px;
+}
+.content_right .num li{
+	width: 15px;
+	height: 15px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 15px;
+	margin-right: 2px;
+	float: left;
+	background: #eee;
+	cursor: pointer;
+}
+.content_right .num li.on{
+	font-weight: 700;
+	font-style: 1.1em;
+	background-color: #444;
+	color: #fff;
+}
+
+.content_right  .prolist{
+	position: relative;
+	height: 220px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border: 1px solid #aaa;
+	background: #fff;
+}
+.content_right  .prolist .prolist_content{
+	position: absolute;
+	width: 1800px;
+	top:26px;
+	left: 0;
+	padding: 20px 0 0 8px;
+}
+.module_left_right{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
+}
+.content_right .prolist ul li{
+	float: left;
+	display: inline;
+	text-align: center;
+	margin-right: 22px;
+}

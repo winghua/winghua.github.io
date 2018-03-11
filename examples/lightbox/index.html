@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>lightbox</title>
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<header>
+		<h4>图片显示插件</h4>
+		<p>data-title为图片的说明</p>
+		<p>data-group为图片的组别</p>
+		<p>data-id为每个图片唯一的序号</p>
+	</header>
+	<div class="box">
+		<section class="one">
+			<h4>Group-1</h4>
+			<ul>
+				<li><img src="img/1.jpg" alt="" class="lightbox" data-title="1-This is the picture makes you feel good!" data-group="1"></li>
+				<li><img src="img/2.jpg" alt="" class="lightbox" data-title="2-This is the picture makes you feel good!" data-group="1"></li>
+				<li><img src="img/3.jpg" alt="" class="lightbox" data-title="3-This is the picture makes you feel good!" data-group="1"></li>
+				<li><img src="img/4.jpg" alt="" class="lightbox" data-title="4-This is the picture makes you feel good!" data-group="1"></li>
+				<li><img src="img/5.jpg" alt="" class="lightbox" data-title="5-This is the picture makes you feel good!" data-group="1"></li>
+			</ul>
+		</section>
+		<section class="two">
+			<h4>Group-2</h4>
+			<ul>
+				<li><img src="img/6.jpg" alt="" class="lightbox" data-title="6-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/7.jpg" alt="" class="lightbox" data-title="7-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/8.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/25.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/26.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/27.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/28.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+				<li><img src="img/29.jpg" alt="" class="lightbox" data-title="8-This is the picture makes you feel good!" data-group="2"></li>
+
+			</ul>
+		</section>
+		<section class="three">
+			<h4>Group-3</h4>
+			<ul>
+				<li><img src="img/9.jpg" alt="" class="lightbox" data-title="9-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/10.jpg" alt="" class="lightbox" data-title="10-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/11.jpg" alt="" class="lightbox" data-title="11-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/12.jpg" alt="" class="lightbox" data-title="12-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/13.jpg" alt="" class="lightbox" data-title="13-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/14.jpg" alt="" class="lightbox" data-title="14-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/15.jpg" alt="" class="lightbox" data-title="15-This is the picture makes you feel good!" data-group="3"></li>
+				<li><img src="img/16.jpg" alt="" class="lightbox" data-title="16-This is the picture makes you feel good!" data-group="3"></li>
+			</ul>
+		</section>
+	</div>
+	<!-- <div class="pop-mask"></div>
+	<div class="pop-box">
+		<div class="pop-box-view">
+			<div class="view-pic">
+				<img src="img/160.jpg" alt="">
+			</div>
+			<div class="view-describ">
+				<div class="view-describ-text">
+					<p class="view-describ-title">This is the picture makes you feel good!</p>
+					<small><i class="view-describ-numb">3 of 14</i></small>
+				</div>
+				
+				<i class="view-describ-close"></i>
+				<div class="view-describ-btn">
+					<a href="#" class="btn prev"></a>
+					<a href="#" class="btn next"></a>
+				</div>
+			</div>
+		</div>
+		<div class="waiting-box">
+			<div class="waiting">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	 -->
+</body>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script>
+		$(function(){
+			$.lightbox({dropSpeed:700,switchSpeed:500});
+		})
+	</script>
+</html>
