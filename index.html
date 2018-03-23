@@ -1,103 +1,260 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title> HOME </title>
-	<meta name="keywords" content="demo">
-	<meta name="description" content="demo">
-	<link type="image/x-icon" rel="shutcut icon" href="img/logo_titile.ico">
-	<style>
-		/*reset*/
-		html, body, div, span, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        abbr, address, cite, code,
-        del, dfn, em, img, ins, kbd, q, samp,
-        small, strong, sub, sup, var,
-        b, i,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section, summary,
-        time, mark, audio, video {
-            margin:0;
-            padding:0;
-            border:0;
-            outline:0;
-            vertical-align:baseline;
-            background:transparent;
-        }
-		html,body{width: 100%;height: 100%;}
-		ul,li{list-style: none;}
-		a{text-decoration: none;}
-		a:visited,a:hover,a:link,a:active{color: black}
+    <head>
+        <!-- meta data & title -->
+        <meta charset="utf-8">
+        <title>Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-		/*main*/
-		header{
-			width: 100%;
-			height: 150px;
-			line-height: 200px;
-			background:orange;
-			font-family: "Arial";
-			text-align: center;
-		}
-		section.main_content{
-			width: 100%;
-		}
-		ul.show_items{
-			width: 800px;
-			/*border: 1px solid blue;*/
-			margin: 10px auto;
-			overflow: hidden;
-			text-align: center;
-			font-size: 15px;
-		}
-		ul.show_items li{
-			width: 200px;
-			height: 200px;
-			/*border: 1px solid red;*/
-			float: left;
+        <!-- Favicon -->
+        <link rel="shotcut icon" href="img/logo_titile.ico">
 
-		}
-		ul.show_items li img{
-			display: block;
-			width: 150px;
-			height: 100px;
-			margin: 10px auto;
-		}
-	</style>
-</head>
-<body>
-<header>
-	<h1>DEMO EXHIBITION</h1>
-</header>
-<section class="main_content">
-	<ul class="show_items">
-		<li><a href="examples/pic_seperate/index.html" target="_black"><img src="img/pic_seperate.png" alt=""><h4>图片分裂</h4></a></li>
-		<li><a href="examples/lightbox/index.html" target="_black"><img src="img/lightbox.png" alt=""><h4>Lightbox</h4></a></li>
-		<li><a href="examples/pic_switch/index.html" target="_black"><img src="img/pic_switch.png" alt=""><h4>图片轮转</h4></a></li>
-		<li><a href="examples/shopCart/index.html" target="_black"><img src="img/shopCart.png" alt=""><h4>购物结算</h4></a></li>
-
-		<li><a href="examples/pic_waterfall/index.html" target="_black"><img src="img/pic_waterfall.png" alt=""><h4>图片瀑布流</h4></a></li>
-		<li><a href="examples/toolbar/index.html" target="_black"><img src="img/toolbar.png" alt=""><h4>简单工具条</h4></a></li>
-		<li><a href="examples/dragPic/index.html" target="_black"><img src="img/dragPic.png" alt=""><h4>九宫格图片拖拽</h4></a></li>
-		<li><a href="examples/NOTEBOOK.html" target="_black"><img src="img/notebook.png" alt=""><h4>笔记本</h4></a></li>
+        <!-- CSS-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/main.css">
 
 
-		<li><a href="examples/hao123_side/index.html" target="_black"><img src="img/hao123_side.png" alt=""><h4>hao123侧边栏</h4></a></li>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+    </head>
+  <body>
+		<!-- Header -->
+	<header>
+  		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items">
+						<span class="sr-only">TOGGLE navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="###" class="navbar-brand">
+						<i class="fa fa-ravelry"></i>
+						EXIBITION</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="nav-items">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="###">HOME</a></li>
+						<li><a href="###">ABOUT</a></li>
+						<li><a href="###">WORKS</a></li>
+						<li><a href="###">SERVICES</a></li>
+						<li><a href="###">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</nav>
 		
+		<section class="banner">
+			<img src="img/7.png" alt="" class="img-responsive">
+			<ul class="items">
+				<li class="one">
+					<i class="fa fa-html5"></i>
+					<p>HTML5</p> 
+				</li>
+				<li class="two">
+					<i class="fa fa-css3"></i>
+					<p>CSS3</p> 
+				</li>
+				<li class="three">
+					<i class="fa fa-github"></i>
+					<p>GitHub</p> 
+				</li>
+				<li class="four">
+					<i class="fa fa-angellist"></i>
+					<p>Bootstrap</p> 
+				</li>
+			</ul>
+					
+		</section>
+  	</header>
+	<!-- End Header -->	
 
+	<section class="abstract">
+		<h3>My Works</h3>
+		<p>The followings are my works that finished in my spare time.<br/>Some languages and toolkits are used, including <i>HTML</i> , <i>CSS</i> , <i>Javascript</i> , <i>jQuery</i> , <i>Bootstrap</i>  and so on.</p>
+	</section>
 
-	</ul>
-</section>
+	<section class="sort">
+		<div class="container">
+			<!-- filter start-->
+			<ul class="bread">
+				<li ><a href="###" class="active" data-filter="*">ALL</a></li>
+				<li class="l"><a href="###" data-filter=".website">Website</a></li>
+				<li class="l"><a href="###" data-filter=".picture">Picture</a></li>
+				<li class="l"><a href="###" data-filter=".plugin">PlugIn</a></li>
+				<li class="l"><a href="###" data-filter=".shop">ShopCart</a></li>
+				<li class="l"><a href="###" data-filter=".others">Others</a></li>
+			</ul>
+			<!-- filter end-->
 
+			<!-- items start-->
+			<div class="row">
+				<div class="isotope-works-items" id="isotope-works-items">
+					<!-- website -->
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item website">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/BusinessWeb.png" alt="Business Web">				
+								<a href="examples/businessWeb/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>1st works item</h6>
+								<p>Business Website,including six complete pages.</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- picture -->
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item picture">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/dragPic.png" alt="Drag picture">				
+								<a href="examples/dragPic/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>2nd works item</h6>
+								<p>Drag the pictures,and the pictures can relayout by themself.</p>
+							</div>
+						</div>
+					</div>
 
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item picture">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/pic_switch.png" alt="switch picture">				
+								<a href="examples/pic_switch/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>3st works item</h6>
+								<p>Another Carousel Figure Design.</p>
+							</div>
+						</div>
+					</div>	
 
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item picture">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/pic_seperate.png" alt="seperate picture">				
+								<a href="examples/pic_seperate/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>4th works item</h6>
+								<p>Picture seperation and recombination.</p>
+							</div>
+						</div>
+					</div>
 
-<script src="js/jquery-3.2.1.min.js"></script>	
-<script>
-	//代码放在主页是减小主页内容的加载时间，减小http的请求次数
+					
+					
+					<!-- plugin -->
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item plugin">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/lightbox.png" alt="lightbox">				
+								<a href="examples/lightbox/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>5th works item</h6>
+								<p>A frequently-used Picture Plug-in.</p>
+							</div>
+						</div>
+							
+					</div>
 
-</script>
-</body>
+					<!-- shop-->
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item shop">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/shopCart.png" alt="lightbox">				
+								<a href="examples/shopCart/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>6th works item</h6>
+								<p>A shopping cart pages.</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- others -->	
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item others">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/hao123_side.png" alt="lightbox">				
+								<a href="examples/hao123_side/index.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>7th works item</h6>
+								<p>A part of the www.hao123.com website.</p>
+							</div>
+						</div>
+					</div>	
+
+					<div class="col-md-4 col-sm-6 col-xs-12 works-item others">
+						<div class="works-box">
+							<div class="works-img">
+								<img src="img/works/notebook.png" alt="lightbox">				
+								<a href="examples/notebook.html" class="circle" target="_blank">
+									<i class="fa fa-eye"></i>	
+								</a>
+								<div class="mask"></div>
+							</div>
+							<div class="works-title">
+								<h6>8th works item</h6>
+								<p>A static notebook.</p>
+							</div>
+						</div>
+					</div>				
+
+				</div>
+			</div>
+			<!-- items end-->
+
+		</div>
+	</section>
+
+	<footer>
+		<p>Copyright &copy; 2018.All rights reserved.</p>
+		<ul class="social-network">
+			<li><a href="###" class="a-animated"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="###" class="a-animated"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="###" class="a-animated"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="###" class="a-animated"><i class="fa fa-wechat"></i></a></li>
+			<li><a href="###" class="a-animated"><i class="fa fa-qq"></i></a></li>
+		</ul>
+	</footer>
+
+  	<script src="js/jquery-3.2.1.min.js"></script>
+  	<script src="js/bootstrap.js"></script>
+  	<script src="js/jquery.isotope.min.js"></script>
+  	<script src="js/main.js"></script>
+  </body>
 </html>

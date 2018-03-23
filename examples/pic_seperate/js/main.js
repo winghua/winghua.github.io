@@ -69,7 +69,8 @@ $(function(){
 					}).find('.box').css({
 		  				"background-image":'url(img/'+index+'.jpg)',
 		  				"border":"2px solid white",
-						"border-radius":"5px"
+						"border-radius":"5px",
+						"background-size":"cover"
 		  			})
 				})
 				$(this).stop().animate({"opacity":"1"},transitionTime,function(){

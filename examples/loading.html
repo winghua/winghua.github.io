@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@keyframes loading {
+			0%{
+				transform:scaleY(1);
+			}
+			50%{
+				transform:scaleY(0.3);
+			}
+			100%{
+				transform:scaleY(1);
+			}
+		}
+		.item{
+			width: 20px;
+			height: 200px;
+			background: green;
+			margin-left: 10px;
+			display: inline-block;
+			animation:loading 2s infinite;
+		}
+		.item:nth-child(1){
+			animation-delay:0.2s;
+		}
+		.item:nth-child(2){
+			animation-delay:0.4s;
+		}
+		.item:nth-child(3){
+			animation-delay:0.6s;
+		}
+		.item:nth-child(4){
+			animation-delay:0.8s;
+		}
+		.item:nth-child(5){
+			animation-delay:1s;
+		}
+		@keyframes round{
+			0%{
+				transform:rotate(0deg);
+			}
+			/*25%{
+				transform:rotate(90deg);
+			}
+			50%{
+				transform:rotate(180deg);
+			}
+			75%{
+				transform:rotate(270deg);
+			}*/
+			100%{
+				transform:rotate(360deg);
+			}
+		}
+		.r-item{
+			width: 30px;
+			height: 150px;
+			/*border: 1px solid blue;*/
+			transform-orign:50% 200%;
+			animation:round 3s infinite;
+			position: absolute;
+			left: 300px;
+			top: 300px;
+		}
+		.r-item:nth-child(1){
+			animation-delay:0.1s;
+		}
+		.r-item:nth-child(2){
+			animation-delay:0.2s;
+		}
+		.r-item:nth-child(3){
+			animation-delay:0.3s;
+		}
+		.r-item:nth-child(4){
+			animation-delay:0.4s;
+		}
+		.r-item span{
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			background: orange;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="container">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div> -->
+	<div class="round">
+		<div class="r-item"> <span></span> </div>
+		<div class="r-item"> <span></span> </div>
+		<div class="r-item"> <span></span> </div>
+		<div class="r-item"> <span></span> </div>
+		<div class="r-item"> <span></span> </div>
+		<div class="r-item"> <span></span> </div>
+	</div>
+</body>
+</html>
