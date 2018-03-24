@@ -199,7 +199,7 @@ nav ul.nav-list li a{
 }
 /*section why choose us*/
 #w-us{
-	width: 63rem;
+	width: 100%;
 	min-width: 60rem;
 	overflow: hidden;
 	background-color: #F5F5F5;
