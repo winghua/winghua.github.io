@@ -239,15 +239,13 @@ footer{
 	margin-top: 2rem;
 	background-color: #F5F5F5;
 	overflow: hidden;
-	line-height: 3rem;
+	line-height: 1.5rem;
 }
 footer p{
-	padding-left: 3rem;
+	padding-left: 2rem;
 	margin: 0;
 	color: #333;
 	font-size: 0.6rem;
-	float: left;
-	
 }
 a.a-animated{
 	transition:color 0.2s linear;
@@ -258,9 +256,8 @@ a.a-animated{
 }
 a.a-animated:hover{color:#337ab7;}
 footer ul.social-network{
-	padding-right: 2rem;
+	padding-left: 2rem;
 	margin: 0;
-	float: right;
 }
 footer ul.social-network li{
 	display: inline-block;
@@ -270,3 +267,18 @@ footer ul.social-network li a{
 	font-size: 0.7rem;
 	color: #777;
 }
+@media (min-width: 768px) { 
+	footer{
+		line-height: 3rem;
+	}
+	footer ul.social-network{
+		padding: 0;
+		float: right;
+	}
+	footer p{
+		padding: 0;
+		float: left;
+
+	}
+	
+ }
