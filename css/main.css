@@ -1,5 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
-
+/*@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700');
+*/
+@import url("GoogleFont.css");
 /*reset*/
 ul,li{
 	list-style: none;
@@ -7,6 +8,7 @@ ul,li{
 a,a:hover,a:visited,a:active,a:link{
 	text-decoration: none;
 }
+
 html,body{
 	font-size: 20px;
 	font-family: 'Open Sans',Arial;
