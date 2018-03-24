@@ -241,7 +241,7 @@ footer{
 	overflow: hidden;
 	line-height: 3rem;
 }
-footer>p{
+footer p{
 	padding-left: 3rem;
 	margin: 0;
 	color: #333;
