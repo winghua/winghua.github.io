@@ -16,7 +16,7 @@ $(function(){
 		for(var i=0;i<rNum;i++)
 		  for(var j=0;j<cNum;j++)
 		  {
-		  	$('<li><div class="box"></div></li>').width(boxW).height(boxH).css({
+		  	$('<li><div class="box small"></div></li>').width(boxW).height(boxH).css({
 		  		"top":Math.ceil(Math.random()*(imgH-boxH-borderL))+'px',
 		  		"left":Math.ceil(Math.random()*(imgW-boxW-borderL))+'px',
 		  	}).find('.box').css({
@@ -33,7 +33,7 @@ $(function(){
 				animated = true;
 				var eSrc = $(e.target).css("background-image");
 				$("#wrapper div").each(function(index,val){
-					$(val).css({
+					$(val).removeClass("small").css({
 					"background-image":eSrc,
 					"background-size":"auto",
 					"backgroundPositionX":-bPosL +"px",
@@ -66,7 +66,7 @@ $(function(){
 					$(val).css({
 						"top":Math.ceil(Math.random()*(imgH-boxH-borderL))+'px',
 		  				"left":Math.ceil(Math.random()*(imgW-boxW-borderL))+'px',
-					}).find('.box').css({
+					}).find('.box').addClass("small").css({
 		  				"background-image":'url(img/'+index+'.jpg)',
 		  				"border":"2px solid white",
 						"border-radius":"5px",
