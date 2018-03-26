@@ -28,10 +28,10 @@ $(function(){
 		var bPosL = 0;  
 		var status = "more";
 		var animated = false; //cannot click if animating
-		$("#wrapper").click(function(e){
+		$("#wrapper>li>div.box").click(function(e){
 			if(status == "more" && animated == false){
 				animated = true;
-				var eSrc = $(e.target).css("background-image");
+				var eSrc = $(this).css("background-image");
 				$("#wrapper div").each(function(index,val){
 					$(val).removeClass("small").css({
 					"background-image":eSrc,
@@ -80,9 +80,40 @@ $(function(){
 			}
 			
 			
-		})
+		});
+		/* drag */
+		var p_oldPoint = {left:"",top:""};
+		var m_oldPoint = {x:"",y:""};
+		var $li = $("#wrapper li");
+		var transitionFlag = false;
+		var moveFlag = false;
+		$li.mousedown(function(e){
+			$("#wrapper li").css({"transition":"none"});
+			moveFlag = true;
+			var $this = $(this);
+			p_oldPoint.left = $this.position().left;
+			p_oldPoint.top = $this.position().top;
+			m_oldPoint.x = e.pageX;
+			m_oldPoint.y = e.pageY;
+		});
+		$li.mousemove(function(e){
+			var $this = $(this);
+			if(moveFlag && status == "more"){
+				var offsetX = e.pageX - m_oldPoint.x;
+				var offsetY = e.pageY - m_oldPoint.y;
+				m_oldPoint.x = e.pageX;
+				m_oldPoint.y = e.pageY;
+				p_oldPoint.left += offsetX;
+				p_oldPoint.top += offsetY;
+				$this.css({left:p_oldPoint.left,top:p_oldPoint.top});
+			}
+		});
+		$li.mouseup(function(e){
+			$("#wrapper li").css({"transition":"all 2s"});
+			moveFlag = false;
+		});
 
-	})
+	});
 });
 
 
