@@ -28,8 +28,46 @@ $(function(){
 		var bPosL = 0;  
 		var status = "more";
 		var animated = false; //cannot click if animating
-		$("#wrapper>li>div.box").click(function(e){
-			if(status == "more" && animated == false){
+		/* drag */
+		var p_oldPoint = {left:"",top:""};
+		var m_oldPoint = {x:"",y:""};
+		var $li = $("#wrapper li");
+		var transitionFlag = false;
+		var moveFlag = false;
+		var distanceX = 0;  //if distance > 10 choose drag function <10 choose other function that make the pciture bigger
+		
+		$("#wrapper>li>div.box").mousedown(function(e){
+			$("#wrapper li").css({"transition":"none"});
+			moveFlag = true;
+			distanceX = 0;
+			var $this = $(this).parent();
+			p_oldPoint.left = $this.position().left;
+			p_oldPoint.top = $this.position().top;
+			m_oldPoint.x = e.pageX;
+			m_oldPoint.y = e.pageY;
+		});
+		$("#wrapper>li>div.box").mousemove(function(e){
+			var $this = $(this).parent();
+			if(moveFlag && status == "more"){
+				var offsetX = e.pageX - m_oldPoint.x;
+				var offsetY = e.pageY - m_oldPoint.y;
+				m_oldPoint.x = e.pageX;
+				m_oldPoint.y = e.pageY;
+				p_oldPoint.left += offsetX;
+				p_oldPoint.top += offsetY;
+				$this.css({left:p_oldPoint.left,top:p_oldPoint.top});
+				distanceX  +=  Math.abs(offsetX);
+			}
+		});
+
+
+		$("#wrapper>li>div.box").mouseup(function(e){
+			/*drag*/
+			$("#wrapper li").css({"transition":"all 2s"});
+		 	moveFlag = false;
+
+		 	if(distanceX < 10){
+		 		if(status == "more" && animated == false){
 				animated = true;
 				var eSrc = $(this).css("background-image");
 				$("#wrapper div").each(function(index,val){
@@ -78,39 +116,8 @@ $(function(){
 					status = "more";
 				})
 			}
+		 	}
 			
-			
-		});
-		/* drag */
-		var p_oldPoint = {left:"",top:""};
-		var m_oldPoint = {x:"",y:""};
-		var $li = $("#wrapper li");
-		var transitionFlag = false;
-		var moveFlag = false;
-		$li.mousedown(function(e){
-			$("#wrapper li").css({"transition":"none"});
-			moveFlag = true;
-			var $this = $(this);
-			p_oldPoint.left = $this.position().left;
-			p_oldPoint.top = $this.position().top;
-			m_oldPoint.x = e.pageX;
-			m_oldPoint.y = e.pageY;
-		});
-		$li.mousemove(function(e){
-			var $this = $(this);
-			if(moveFlag && status == "more"){
-				var offsetX = e.pageX - m_oldPoint.x;
-				var offsetY = e.pageY - m_oldPoint.y;
-				m_oldPoint.x = e.pageX;
-				m_oldPoint.y = e.pageY;
-				p_oldPoint.left += offsetX;
-				p_oldPoint.top += offsetY;
-				$this.css({left:p_oldPoint.left,top:p_oldPoint.top});
-			}
-		});
-		$li.mouseup(function(e){
-			$("#wrapper li").css({"transition":"all 2s"});
-			moveFlag = false;
 		});
 
 	});
